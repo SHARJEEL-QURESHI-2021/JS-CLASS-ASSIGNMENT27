@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #273f00;
+    border: 10px solid whitesmoke;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.registration_header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav-tabs {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fffcfc;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    border-bottom-color: #333;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+.preview_container {
+    display: none;
+}
+
+.preview_container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #000000;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn.secondary {
+    background-color: #999;
+}
+
+.btn.primary:hover {
+    background-color: #555;
+}
+
+.btn.secondary:hover {
+    background-color: #777;
+}
+
+.search-fields {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.search-fields input[type="text"] {
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.search-fields .btn {
+    margin-left: 5px;
+    margin-right: 25px;
+}
+
+#previewTable {
+    margin-top: 15px;
+    border: 1px solid #999;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#previewTable th,
+#previewTable td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #999;
+}
+
+#previewTable td {
+    font-size: 12px;
+}
+
+#previewTable th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}

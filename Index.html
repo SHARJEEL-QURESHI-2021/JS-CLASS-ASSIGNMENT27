@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="registration_header">
+      <h2>Course Registration Form</h2>
+    </div>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#" onclick="showFillForm()">Fill Form</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="showPreview()">Preview Forms</a>
+      </li>
+    </ul>
+    <form id="registrationForm">
+      <div class="row mt-4">
+        <div class="col-md-6 mb-3">
+          <label for="selectCity" class="form-label">Select City</label>
+          <input type="text" class="form-control" id="selectCity" placeholder="Select City">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="selectCourse" class="form-label">Select Course</label>
+          <input type="text" class="form-control" id="selectCourse" placeholder="Select Course">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6 mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="fatherName" class="form-label">Father Name</label>
+          <input type="text" class="form-control" id="fatherName" placeholder="Father Name">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6 mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="text" class="form-control" id="phone" placeholder="Phone">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6 mb-3">
+          <label for="cnic" class="form-label">CNIC</label>
+          <input type="text" class="form-control" id="cnic" placeholder="CNIC">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="fatherCnic" class="form-label">Father's CNIC (optional)</label>
+          <input type="text" class="form-control" id="fatherCnic" placeholder="Father's CNIC (optional)">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6 mb-3">
+          <label for="dateOfBirth" class="form-label">Date of Birth</label>
+          <input type="date" class="form-control" id="dateOfBirth" placeholder="Date of Birth">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="selectGender" class="form-label">Select Gender</label>
+          <select class="form-select" id="selectGender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary mt-4" onclick="saveFormData()">Submit</button>
+    </form>
+  </div>
+
+  <div class="preview_container" id="previewContainer" style="display: none;">
+    <h2 class="text-center">Preview Forms</h2>
+    <button class="btn btn-secondary mt-3" onclick="hidePreview()">Close</button>
+  
+    <div class="search-fields mt-3">
+      <input type="text" id="searchCity" placeholder="Search by City" />
+      <button class="btn btn-primary" onclick="searchByCity()">Search</button>
+  
+      <input type="text" id="searchName" placeholder="Search by Name" />
+      <button class="btn btn-primary" onclick="searchByName()">Search</button>
+  
+      <input type="text" id="searchCourse" placeholder="Search by Course" />
+      <button class="btn btn-primary" onclick="searchByCourse()">Search</button>
+    </div>
+  
+    <table id="previewTable" class="table table-bordered table-striped mt-3"></table>
+  </div>
+  
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="sweetalert2.all.min.js"></script>
+</body>
+</html>
